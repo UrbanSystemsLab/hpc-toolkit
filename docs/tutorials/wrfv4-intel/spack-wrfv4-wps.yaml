@@ -14,7 +14,7 @@
 
 ---
 
-blueprint_name: spack-wrfv4-intel
+blueprint_name: spack-wrfv4-intel-wps
 
 vars:
   project_id:  ## Set GCP Project ID Here ##
