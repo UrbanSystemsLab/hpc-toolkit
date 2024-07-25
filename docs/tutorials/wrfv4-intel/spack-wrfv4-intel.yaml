@@ -13,12 +13,12 @@
 # limitations under the License.
 
 ---
-
+##change to spack-wrfv4-intel-4-x for newer veresions
 blueprint_name: spack-wrfv4-intel-4
 
 vars:
   project_id:  ## Set GCP Project ID Here ##
-  deployment_name: spack-wrfv4-intel-4
+  deployment_name: spack-wrfv4-intel-4  ##update for newer versions
   region: us-central1
   zone: us-central1-a
   
@@ -60,7 +60,7 @@ deployment_groups:
         content: |
           spack:
             specs:
-             - wrf@4.4 build_type=dm+sm compile_type=em_real nesting=basic ~pnetcdf target=skylake_avx512 %oneapi@2024.1.0 ^intel-oneapi-mpi@2021.11.0
+             - wrf@4.4 build_type=dm+sm compile_type=em_real nesting=basic ~pnetcdf target=skylake_avx512 %oneapi@2024.2.0 ^intel-oneapi-mpi@2021.11.0
       commands: |
         # Un-comment and update mirror_url to install from spack cache
         spack mirror add --scope=site wrf_cache gs://hpc-spack-cache-public
